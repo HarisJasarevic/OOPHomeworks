@@ -10,31 +10,31 @@ public class Rectangle {
         this.b = b;
     }
 
-    public double getA() {
+    public final double getA() {
         return a;
     }
 
-    public void setA(final double a) {
+    public final void setA(final double a) {
         this.a = a;
     }
 
-    public double getB() {
+    public final double getB() {
         return b;
     }
 
-    public void setB(final double b) {
+    public final void setB(final double b) {
         this.b = b;
     }
 
-    public double getCircumference () {
+    public final double getCircumference () {
         return (2 * a) + (2 * b);
     }
 
-    public double getArea () {
+    public final double getArea () {
         return a * b;
     }
 
-    public boolean isSquare () {
+    public final boolean isSquare () {
         return a == b;
     }
 
