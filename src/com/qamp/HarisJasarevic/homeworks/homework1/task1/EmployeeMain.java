@@ -1,4 +1,4 @@
-package com.qamp.HarisJasarevic.homeworks.task1;
+package com.qamp.HarisJasarevic.homeworks.homework1.task1;
 
 public class EmployeeMain {
 

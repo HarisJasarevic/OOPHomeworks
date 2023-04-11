@@ -1,4 +1,4 @@
-package com.qamp.HarisJasarevic.homeworks.task3;
+package com.qamp.HarisJasarevic.homeworks.homework1.task3;
 
 public class Complex {
 

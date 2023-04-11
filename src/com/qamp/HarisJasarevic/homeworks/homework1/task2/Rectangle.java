@@ -1,4 +1,4 @@
-package com.qamp.HarisJasarevic.homeworks.task2;
+package com.qamp.HarisJasarevic.homeworks.homework1.task2;
 
 public class Rectangle {
 
