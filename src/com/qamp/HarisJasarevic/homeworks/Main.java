@@ -1,7 +1,4 @@
 package com.qamp.HarisJasarevic.homeworks;
 
-public class Homework1 {
-
-
-
+public class Main {
 }
