@@ -41,4 +41,19 @@ public class Employee {
     public void setEmployeeSalary(final double employeeSalary) {
         this.employeeSalary = employeeSalary;
     }
+
+    public String getFullName () {
+        return firstName + " " + lastName;
+    }
+
+    public void raiseSalary (double percent) {
+        employeeSalary *= (1 + percent / 100);
+    }
+
+    public void printEmployeeDetails () {
+        System.out.println("Name: " + getFullName());
+        System.out.println("Salary $: " + employeeSalary);
+    }
+
+
 }
