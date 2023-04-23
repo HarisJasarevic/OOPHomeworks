@@ -85,6 +85,8 @@ z3.printComplex() -> - 4i
 
 
 
+
+
 QAMP (OOP) - HOMEWORK 3
 
 Create a Person.class.
@@ -198,6 +200,9 @@ Important:
 3. Ideally Car/ElectricCar do not know about the details of their Engines, so think about how
    you use the factors.
 
+
+
+
 HOMEWORK 4.
 
 Create the interfaces Flight and Swim.
@@ -284,3 +289,52 @@ NOTES:
 1. Abstract classes can have constructors just like normal classes.
 2. For calculating PI use Math.PI
 3. Regarding the toString() part: BE SMART, THINK
+
+
+
+
+HOMEWORK 5.
+
+
+SavingAccounts only)
+
+Owner:
+First name String
+
+Last name String
+
+Address String
+
+Has a constructor with all 3 attributes.
+
+Main Class:
+Write a main class to demonstrate the behaviour of ATM. The main method should handle
+all the exceptions. Handling of exceptions should be done by simply printing the Exception
+message.
+
+——BONUS——:
+Rewrite the Main class, such that it contains a fixed number of accounts.
+
+Create a Scanner object which will receive user input.
+
+Create an infinite loop which will repeatedly print the following: 
+ 
+1 deposit
+
+2 withdraw
+
+3 reset
+
+4 show account info
+
+anythingElse = quit
+You can assume that the input will always be an integer.
+After 1-4 are chosen, the user will be prompted to insert SerialNumber, passcode and amount (in
+case withdraw or deposit is chosen).
+
+Assume the user input is always correct i.e. never a String for balance etc...
+Implement proper Exception Handling for all the methods, and print the error messages returned
+by the ATM.
+
+The invoking of the respective methods based on user choice can be done either from the
+Main.class or ATM.class, your choice.
