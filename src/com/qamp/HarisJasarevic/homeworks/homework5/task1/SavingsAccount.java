@@ -7,36 +7,36 @@ public class SavingsAccount extends BankAccounts {
 
     protected SavingsAccount (final AccountOwner accountOwner, final String serialNumber, final int passCode, final int dailyTransactionLimit) {
         super(accountOwner, serialNumber, passCode);
-        this.dailyTransactionLimit = 1000;
+        this.dailyTransactionLimit = dailyTransactionLimit;
         this.transactionsLeft = 3;
     }
 
     @Override
 
     public double moneyWithdraw (final double withdrawAmount) throws IllegalStateException {
-        if (balance - withdrawAmount < 0) {
+        if (accountBalance - withdrawAmount < 0) {
             throw new IllegalStateException("There is no enough funds available!");
         }
         if (withdrawAmount > dailyTransactionLimit) {
             throw new IllegalStateException("Withdrawal amount exceeds the daily transaction limit!");
         }
-        if (transactionsLeft == 0) {
+        if (transactionsLeft <= 0) {
             throw new IllegalStateException("You exceeded the limit of daily transactions!");
         }
-        balance -= withdrawAmount;
+        accountBalance -= withdrawAmount;
         transactionsLeft--;
-        return balance;
+        return accountBalance;
     }
 
     @Override
 
     public double moneyDeposit (final double depositAmount) throws IllegalStateException {
-        if (transactionsLeft == 0) {
+        if (transactionsLeft <= 0) {
             throw new IllegalStateException("Cannot deposit due to daily number of transactions limit exceeded");
         }
-        balance += depositAmount;
+        accountBalance += depositAmount;
         transactionsLeft--;
-        return balance;
+        return accountBalance;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class SavingsAccount extends BankAccounts {
     @Override
     public String showAccountState () {
         return "Owner information: {" + accountOwner.getFirstName() + "}, " + accountOwner.getLastName() + ", "
-                + accountOwner.getAddress() + "\n" + "Current balance: " + balance + "\n"
+                + accountOwner.getAddress() + "\n" + "Current balance: " + accountBalance + "\n"
                 + "Current daily limit: {" + dailyTransactionLimit + "}, " + "numberOfAvailableTransactions {" + transactionsLeft + "}";
     }
 }

@@ -5,13 +5,13 @@ public abstract class BankAccounts {
     protected AccountOwner accountOwner;
     protected String serialNumber;
     protected int passCode;
-    protected double balance;
+    protected double accountBalance;
 
     public BankAccounts(final AccountOwner accountOwner, final String serialNumber, final int passCode) {
         this.accountOwner = accountOwner;
         this.serialNumber = serialNumber;
         this.passCode = passCode;
-        this.balance = 0;
+        this.accountBalance = 0;
     }
 
     public abstract double moneyWithdraw ( final double withdrawAmount) throws IllegalStateException;

@@ -8,15 +8,15 @@ public class CurrentAccount extends BankAccounts{
 
     @Override
     public double moneyWithdraw (final double withdrawAmount) {
-        balance -= withdrawAmount;
-        return balance;
+        accountBalance -= withdrawAmount;
+        return accountBalance;
     }
 
     @Override
 
     public double moneyDeposit (final double depositAmount) throws IllegalStateException {
-        balance += depositAmount;
-        return balance;
+        accountBalance += depositAmount;
+        return accountBalance;
     }
 
     @Override
@@ -28,6 +28,6 @@ public class CurrentAccount extends BankAccounts{
 
     public String showAccountState () {
         return "Owner information: {" + accountOwner.getFirstName() + "}, " + accountOwner.getLastName() + ", "
-                + accountOwner.getAddress() + "\n" + "Current balance: " + balance;
+                + accountOwner.getAddress() + "\n" + "Current balance: " + accountBalance;
     }
 }
